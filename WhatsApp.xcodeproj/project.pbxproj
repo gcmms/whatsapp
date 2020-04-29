@@ -13,6 +13,12 @@
 		0DF68B4B24590BEB00A60D26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF68B4924590BEB00A60D26 /* Main.storyboard */; };
 		0DF68B4D24590BED00A60D26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF68B4C24590BED00A60D26 /* Assets.xcassets */; };
 		0DF68B5024590BED00A60D26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF68B4E24590BED00A60D26 /* LaunchScreen.storyboard */; };
+		0DF68B59245912A700A60D26 /* ConversasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B58245912A700A60D26 /* ConversasTableViewController.swift */; };
+		0DF68B5B2459136E00A60D26 /* ConversaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B5A2459136E00A60D26 /* ConversaTableViewCell.swift */; };
+		0DF68B5F245914ED00A60D26 /* ConversaDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B5E245914ED00A60D26 /* ConversaDao.swift */; };
+		0DF68B61245914FA00A60D26 /* Conversa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B60245914FA00A60D26 /* Conversa.swift */; };
+		0DF68B642459158700A60D26 /* Contato.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B632459158700A60D26 /* Contato.swift */; };
+		0DF68B672459163B00A60D26 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B662459163B00A60D26 /* Mensagem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		0DF68B4C24590BED00A60D26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DF68B4F24590BED00A60D26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DF68B5124590BED00A60D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DF68B58245912A700A60D26 /* ConversasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversasTableViewController.swift; sourceTree = "<group>"; };
+		0DF68B5A2459136E00A60D26 /* ConversaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversaTableViewCell.swift; sourceTree = "<group>"; };
+		0DF68B5E245914ED00A60D26 /* ConversaDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversaDao.swift; sourceTree = "<group>"; };
+		0DF68B60245914FA00A60D26 /* Conversa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversa.swift; sourceTree = "<group>"; };
+		0DF68B632459158700A60D26 /* Contato.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contato.swift; sourceTree = "<group>"; };
+		0DF68B662459163B00A60D26 /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,9 @@
 		0DF68B4224590BEB00A60D26 /* WhatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				0DF68B622459151C00A60D26 /* Dao */,
+				0DF68B5D245914D200A60D26 /* Model */,
+				0DF68B5C245914C800A60D26 /* Controller */,
 				0DF68B4324590BEB00A60D26 /* AppDelegate.swift */,
 				0DF68B4524590BEB00A60D26 /* SceneDelegate.swift */,
 				0DF68B4724590BEB00A60D26 /* ViewController.swift */,
@@ -65,6 +80,41 @@
 				0DF68B5124590BED00A60D26 /* Info.plist */,
 			);
 			path = WhatsApp;
+			sourceTree = "<group>";
+		};
+		0DF68B572459128500A60D26 /* Conversas */ = {
+			isa = PBXGroup;
+			children = (
+				0DF68B58245912A700A60D26 /* ConversasTableViewController.swift */,
+				0DF68B5A2459136E00A60D26 /* ConversaTableViewCell.swift */,
+			);
+			path = Conversas;
+			sourceTree = "<group>";
+		};
+		0DF68B5C245914C800A60D26 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0DF68B572459128500A60D26 /* Conversas */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0DF68B5D245914D200A60D26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0DF68B60245914FA00A60D26 /* Conversa.swift */,
+				0DF68B632459158700A60D26 /* Contato.swift */,
+				0DF68B662459163B00A60D26 /* Mensagem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0DF68B622459151C00A60D26 /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				0DF68B5E245914ED00A60D26 /* ConversaDao.swift */,
+			);
+			path = Dao;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF68B642459158700A60D26 /* Contato.swift in Sources */,
+				0DF68B59245912A700A60D26 /* ConversasTableViewController.swift in Sources */,
+				0DF68B61245914FA00A60D26 /* Conversa.swift in Sources */,
 				0DF68B4824590BEB00A60D26 /* ViewController.swift in Sources */,
+				0DF68B5B2459136E00A60D26 /* ConversaTableViewCell.swift in Sources */,
+				0DF68B5F245914ED00A60D26 /* ConversaDao.swift in Sources */,
 				0DF68B4424590BEB00A60D26 /* AppDelegate.swift in Sources */,
 				0DF68B4624590BEB00A60D26 /* SceneDelegate.swift in Sources */,
+				0DF68B672459163B00A60D26 /* Mensagem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
