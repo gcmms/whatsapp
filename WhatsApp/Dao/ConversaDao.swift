@@ -11,10 +11,16 @@ import Foundation
 class ConversaDao {
         
     static func retornaTodasAsConversas() -> [Conversa] {
-        let conversas = [Conversa]()
-        let joao = Contato(nome: "João da Silva", descricao: "", numero: 5513999999999)
-        let joaoMensagem = Conversa(destinatario: joao, mensagem: [Mensagem]())
-        conversas.
+        var conversas = [Conversa]()
+        
+        let rootContato = Contato(nome: "Gabriel Sanzone", imagemPerfil: nil, descricao: "", numero: 5513999999991)
+        
+        let joao = Contato(nome: "João da Silva", imagemPerfil: nil, descricao: "", numero: 5513999999992)
+        let joaoMensagem = Mensagem(remetente: joao, horaEnviado: Date(), horaRecebido: nil, horaVisualizado: nil, textoMensagem: "Olá Gabriel bem ?")
+        let gabrielMensagem = Mensagem(remetente: rootContato, horaEnviado: Date(), horaRecebido: nil, horaVisualizado: nil, textoMensagem: "Olá Gabriel bem ?")
+        let joaoConversa = Conversa(destinatario: joao, mensagens: [joaoMensagem, gabrielMensagem])
+        
+        conversas.append(joaoConversa)
         return conversas
     }
     

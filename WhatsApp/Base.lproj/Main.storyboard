@@ -16,8 +16,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="7c7-iQ-Kkh" kind="relationship" relationship="viewControllers" id="gIB-hh-0yi"/>
                         <segue destination="Jbz-xo-mZG" kind="relationship" relationship="viewControllers" id="sMm-zb-1Iy"/>
+                        <segue destination="7c7-iQ-Kkh" kind="relationship" relationship="viewControllers" id="gIB-hh-0yi"/>
                         <segue destination="rWN-gH-T0O" kind="relationship" relationship="viewControllers" id="cWn-dR-Sb2"/>
                     </connections>
                 </tabBarController>
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="7c7-iQ-Kkh" id="cHD-JM-ska"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Ligações" id="yrE-JL-Vsk"/>
+                    <tabBarItem key="tabBarItem" title="Ligações" image="phone.fill" catalog="system" id="yrE-JL-Vsk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KUy-z3-RvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="rWN-gH-T0O" id="KLN-dQ-I1e"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Ajustes" id="QL3-Vw-AA3"/>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="person.circle" catalog="system" id="QL3-Vw-AA3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xlD-Pe-8us" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,14 +92,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="87" id="TRt-mr-HCA" customClass="ConversaTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="conversaCell" rowHeight="87" id="TRt-mr-HCA" customClass="ConversaTableViewCell" customModule="WhatsApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TRt-mr-HCA" id="kGZ-pO-lP7" customClass="ConversasTableViewCell" customModule="WhatsApp" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="conversa" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TRt-mr-HCA" id="kGZ-pO-lP7" customClass="ConversaTableViewCell" customModule="WhatsApp" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-lR-bIU">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="semavatar" translatesAutoresizingMaskIntoConstraints="NO" id="Q7t-lR-bIU">
                                             <rect key="frame" x="20" y="9" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -107,13 +107,6 @@
                                             <rect key="frame" x="104" y="9" width="136" height="23"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="remetente:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4N-g9-c4R">
-                                            <rect key="frame" x="104" y="29" width="136" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -133,6 +126,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgContato" destination="Q7t-lR-bIU" id="Yyc-oP-fXS"/>
+                                    <outlet property="lbHora" destination="vx8-2l-5Wo" id="aip-yQ-smG"/>
+                                    <outlet property="lbMensagem" destination="AlK-EJ-luz" id="iNY-zD-TZF"/>
+                                    <outlet property="lbNomeContato" destination="rHe-Pg-yGg" id="KFP-dK-wPM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -151,7 +150,7 @@
         <scene sceneID="efl-oZ-glR">
             <objects>
                 <navigationController id="Jbz-xo-mZG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conversas" id="SYj-6b-5lk"/>
+                    <tabBarItem key="tabBarItem" title="Conversas" image="message" catalog="system" id="SYj-6b-5lk"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bQB-dR-9Dh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -168,4 +167,10 @@
             <point key="canvasLocation" x="1951" y="-747"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+        <image name="semavatar" width="300" height="300"/>
+    </resources>
 </document>

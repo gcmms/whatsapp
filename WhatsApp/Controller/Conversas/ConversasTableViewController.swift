@@ -10,9 +10,13 @@ import UIKit
 
 class ConversasTableViewController: UITableViewController {
 
+    var conversas = ConversaDao.retornaTodasAsConversas()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        tableView.dataSource = self
+        tableView.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,7 +33,21 @@ class ConversasTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return conversas.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ConversaTableViewCell.cellId, for: indexPath) as! ConversaTableViewCell
+        let conversaAtual = conversas[indexPath.row]
+        cell.lbNomeContato.text = conversaAtual.destinatario.nome
+        cell.lbMensagem.text = conversaAtual.mensagens.last?.textoMensagem
+        cell.hora = conversaAtual.mensagens.last!.horaEnviado
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 87
+       }
 
 }

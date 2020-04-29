@@ -10,6 +10,7 @@ import Foundation
 
 struct Contato {
     let nome: String
+    let imagemPerfil: String?
     let descricao: String
     let numero: Int
 }

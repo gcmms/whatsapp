@@ -11,6 +11,6 @@ import Foundation
 
 struct Conversa {
     let destinatario: Contato
-    let mensagem: [Mensagem]
+    let mensagens: [Mensagem]
     
 }
