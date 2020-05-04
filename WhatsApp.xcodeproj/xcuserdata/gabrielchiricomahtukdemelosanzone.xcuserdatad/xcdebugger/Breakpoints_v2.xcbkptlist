@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E07EF1FA-F998-43CF-B990-099D8644A1C8"
-            shouldBeEnabled = "Yes"
+            uuid = "CA17BAF4-BF2F-4B85-9CB6-35232FC64DD3"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WhatsApp/Controller/Conversas/ConversasTableViewController.swift"
+            filePath = "WhatsApp/Controller/Contatos/ContatosTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

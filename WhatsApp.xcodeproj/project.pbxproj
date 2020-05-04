@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD43B19245E47A300D5E367 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD43B18245E47A300D5E367 /* ContatoDao.swift */; };
+		0DD43B1E245F2EF500D5E367 /* ContatosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD43B1D245F2EF500D5E367 /* ContatosTableViewController.swift */; };
+		0DD43B20245F323200D5E367 /* ContatosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD43B1F245F323200D5E367 /* ContatosTableViewCell.swift */; };
+		0DD43B22245F3C1C00D5E367 /* UtilidadesGerais.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD43B21245F3C1C00D5E367 /* UtilidadesGerais.swift */; };
 		0DF68B4424590BEB00A60D26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B4324590BEB00A60D26 /* AppDelegate.swift */; };
 		0DF68B4624590BEB00A60D26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B4524590BEB00A60D26 /* SceneDelegate.swift */; };
 		0DF68B4824590BEB00A60D26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF68B4724590BEB00A60D26 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DD43B18245E47A300D5E367 /* ContatoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = "<group>"; };
+		0DD43B1D245F2EF500D5E367 /* ContatosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosTableViewController.swift; sourceTree = "<group>"; };
+		0DD43B1F245F323200D5E367 /* ContatosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatosTableViewCell.swift; sourceTree = "<group>"; };
+		0DD43B21245F3C1C00D5E367 /* UtilidadesGerais.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilidadesGerais.swift; sourceTree = "<group>"; };
 		0DF68B4024590BEB00A60D26 /* WhatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF68B4324590BEB00A60D26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DF68B4524590BEB00A60D26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DD43B1A245F2D5100D5E367 /* Contatos */ = {
+			isa = PBXGroup;
+			children = (
+				0DD43B1D245F2EF500D5E367 /* ContatosTableViewController.swift */,
+				0DD43B1F245F323200D5E367 /* ContatosTableViewCell.swift */,
+			);
+			path = Contatos;
+			sourceTree = "<group>";
+		};
 		0DF68B3724590BEB00A60D26 = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +111,9 @@
 		0DF68B5C245914C800A60D26 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				0DD43B1A245F2D5100D5E367 /* Contatos */,
 				0DF68B572459128500A60D26 /* Conversas */,
+				0DD43B21245F3C1C00D5E367 /* UtilidadesGerais.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF68B5E245914ED00A60D26 /* ConversaDao.swift */,
+				0DD43B18245E47A300D5E367 /* ContatoDao.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -192,9 +212,13 @@
 				0DF68B59245912A700A60D26 /* ConversasTableViewController.swift in Sources */,
 				0DF68B61245914FA00A60D26 /* Conversa.swift in Sources */,
 				0DF68B4824590BEB00A60D26 /* ViewController.swift in Sources */,
+				0DD43B20245F323200D5E367 /* ContatosTableViewCell.swift in Sources */,
+				0DD43B22245F3C1C00D5E367 /* UtilidadesGerais.swift in Sources */,
 				0DF68B5B2459136E00A60D26 /* ConversaTableViewCell.swift in Sources */,
+				0DD43B1E245F2EF500D5E367 /* ContatosTableViewController.swift in Sources */,
 				0DF68B5F245914ED00A60D26 /* ConversaDao.swift in Sources */,
 				0DF68B4424590BEB00A60D26 /* AppDelegate.swift in Sources */,
+				0DD43B19245E47A300D5E367 /* ContatoDao.swift in Sources */,
 				0DF68B4624590BEB00A60D26 /* SceneDelegate.swift in Sources */,
 				0DF68B672459163B00A60D26 /* Mensagem.swift in Sources */,
 			);

@@ -14,11 +14,14 @@ class ConversaTableViewCell: UITableViewCell {
     @IBOutlet weak var lbNomeContato: UILabel!
     @IBOutlet weak var lbMensagem: UILabel!
     @IBOutlet weak var lbHora: UILabel!
+    @IBOutlet weak var contMensagem: UIView!
     
     var hora = Date() {
         didSet {
             let value = formartDate(format: "hh:mm", value: hora)
             lbHora.text = value
+            
+            contMensagem.layer.cornerRadius = 8
         }
     }
     
