@@ -16,6 +16,7 @@ class ContatosTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -31,7 +32,7 @@ class ContatosTableViewController: UITableViewController {
         let contato = listaContatos[indexPath.row]
         cell.lbNome.text = contato.nome
         cell.lbDescricao.text = contato.descricao
-        cell.imgPerfil.image  = UIImage(named: "semavatar")
+        UtilidadesGerais.configImageView(imageView: cell.imgPerfil, strImage: "semavatar")
         return cell
     }
     
