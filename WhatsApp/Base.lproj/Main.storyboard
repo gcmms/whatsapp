@@ -115,7 +115,7 @@
                     <navigationItem key="navigationItem" id="fH2-v1-ZZo">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" title="Editar" id="mIB-gs-jKA"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eHb-ws-L9Q">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="eHb-ws-L9Q">
                             <rect key="frame" x="114" y="5.6666666666666679" width="147" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -125,7 +125,7 @@
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="phone.fill" catalog="system" id="W1a-2G-VRT">
                             <connections>
-                                <segue destination="lhR-KA-d7D" kind="showDetail" id="cFr-FB-lLK"/>
+                                <segue destination="lhR-KA-d7D" kind="showDetail" id="Zfm-zd-UbI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -134,7 +134,7 @@
             </objects>
             <point key="canvasLocation" x="2647.1999999999998" y="-1482.2660098522167"/>
         </scene>
-        <!--Contatos Table View Controller-->
+        <!--Contatos-->
         <scene sceneID="Jn6-Vb-jPD">
             <objects>
                 <tableViewController id="lhR-KA-d7D" customClass="ContatosTableViewController" customModule="WhatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,25 +150,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hmT-ru-6Ku">
-                                            <rect key="frame" x="16" y="3" width="37" height="37"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-cT-Ffa">
-                                            <rect key="frame" x="61" y="3" width="208" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-cT-Ffa">
+                                            <rect key="frame" x="61" y="3.3333333333333339" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6U-qn-Aj9">
-                                            <rect key="frame" x="61" y="19" width="208" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6U-qn-Aj9">
+                                            <rect key="frame" x="61" y="24" width="263" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hmT-ru-6Ku">
+                                            <rect key="frame" x="16" y="3.3333333333333321" width="37" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="37" id="2O8-O0-xuD"/>
+                                                <constraint firstAttribute="height" constant="37" id="wUQ-Er-Akm"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hmT-ru-6Ku" firstAttribute="leading" secondItem="wVE-Wm-ajj" secondAttribute="leadingMargin" id="8dn-uh-skd"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8qh-cT-Ffa" secondAttribute="trailing" constant="20" symbolic="YES" id="DrX-5Q-h03"/>
+                                        <constraint firstItem="O6U-qn-Aj9" firstAttribute="top" secondItem="wVE-Wm-ajj" secondAttribute="topMargin" constant="13" id="Hyu-jI-GI5"/>
+                                        <constraint firstItem="hmT-ru-6Ku" firstAttribute="centerY" secondItem="wVE-Wm-ajj" secondAttribute="centerY" id="cCa-Eq-7Rf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="O6U-qn-Aj9" secondAttribute="trailing" constant="35" id="kUg-5u-AAz"/>
+                                        <constraint firstItem="8qh-cT-Ffa" firstAttribute="leading" secondItem="hmT-ru-6Ku" secondAttribute="trailing" constant="8" id="wTR-Rk-z8N"/>
+                                        <constraint firstItem="O6U-qn-Aj9" firstAttribute="leading" secondItem="8qh-cT-Ffa" secondAttribute="leading" id="xhm-te-Lv6"/>
+                                        <constraint firstItem="hmT-ru-6Ku" firstAttribute="top" secondItem="8qh-cT-Ffa" secondAttribute="top" id="yMz-Mk-lH3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imgPerfil" destination="hmT-ru-6Ku" id="Fnu-cx-sjs"/>
@@ -182,10 +193,11 @@
                             <outlet property="delegate" destination="lhR-KA-d7D" id="unq-at-Msx"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Contatos" id="NcV-eT-ggb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cs2-6s-8w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3640.8000000000002" y="-1498.5221674876848"/>
+            <point key="canvasLocation" x="3618.75" y="-1482.0422535211267"/>
         </scene>
         <!--Ligação-->
         <scene sceneID="qPt-ze-bVx">
@@ -285,7 +297,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Editar" id="rlh-QO-QgR"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" id="qKq-L2-AJ6">
                             <connections>
-                                <segue destination="lhR-KA-d7D" kind="showDetail" id="LhO-Oh-CC7"/>
+                                <segue destination="lhR-KA-d7D" kind="showDetail" id="3hv-cM-3fq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -317,7 +329,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="LhO-Oh-CC7"/>
+        <segue reference="Zfm-zd-UbI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
